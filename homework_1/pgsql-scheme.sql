@@ -9,6 +9,7 @@ CREATE TABLE "product_category"
 ALTER TABLE
     "product_category"
     ADD PRIMARY KEY ("id");
+COMMENT ON TABLE "product_category" IS 'Таблица для хранения категорий продуктов';
 
 
 CREATE TABLE "order"
@@ -24,6 +25,7 @@ CREATE TABLE "order"
 ALTER TABLE
     "order"
     ADD PRIMARY KEY ("id");
+COMMENT ON TABLE "order" IS 'Таблица для хранения данных заказов';
 
 
 CREATE TABLE "producer"
@@ -36,6 +38,7 @@ CREATE TABLE "producer"
 ALTER TABLE
     "producer"
     ADD PRIMARY KEY ("id");
+COMMENT ON TABLE "producer" IS 'Таблица для хранения данных производителей продуктов';
 
 
 CREATE TABLE "product"
@@ -51,6 +54,7 @@ CREATE TABLE "product"
 ALTER TABLE
     "product"
     ADD PRIMARY KEY ("id");
+COMMENT ON TABLE "product" IS 'Таблица для хранения данных продуктов';
 
 
 CREATE TABLE "order_products"
@@ -62,6 +66,7 @@ CREATE TABLE "order_products"
     "created"       TIMESTAMP(6) WITH TIME zone NOT NULL,
     "updated"       TIMESTAMP(6) WITH TIME zone NULL
 );
+COMMENT ON TABLE "order_products" IS 'Таблица для хранения списка продуктов в заказах';
 
 
 CREATE TABLE "prices"
@@ -76,6 +81,7 @@ CREATE TABLE "prices"
 ALTER TABLE
     "prices"
     ADD PRIMARY KEY ("id");
+COMMENT ON TABLE "prices" IS 'Таблица для хранения данных цен';
 
 
 CREATE TABLE "buyer"
@@ -89,10 +95,10 @@ CREATE TABLE "buyer"
     "created"      TIMESTAMP(6) WITH TIME zone NOT NULL,
     "updated"      TIMESTAMP(6) WITH TIME zone NULL
 );
-
 ALTER TABLE
     "buyer"
     ADD PRIMARY KEY ("id");
+COMMENT ON TABLE "buyer" IS 'Таблица для хранения данных покупателей';
 
 
 CREATE TABLE "provider"
@@ -105,6 +111,7 @@ CREATE TABLE "provider"
 ALTER TABLE
     "provider"
     ADD PRIMARY KEY ("id");
+COMMENT ON TABLE "provider" IS 'Таблица для хранения данных поставщиков продуктов';
 
 
 ALTER TABLE
